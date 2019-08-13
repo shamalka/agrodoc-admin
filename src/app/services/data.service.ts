@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Discussion } from 'app/models/discussion.model';
+import { Discussion } from 'app/models/discussion';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,7 @@ export class DataService {
     this.firestore.doc('discussions/' + discussion.id).update(discussion);
   }
 
-  deleteDiscussion(discussion: Discussion){
-    this.firestore.doc('discussions/' + discussion.id).delete();
+  deleteDiscussion(id: string){
+    this.firestore.doc('discussions/' + id).delete();
   }
 }

@@ -1,0 +1,17 @@
+<ol>
+  <li>
+    <mat-form-field>
+      <input matInput [(ngModel)]="dataObject.title" #report_description="ngModel" name="report_description" placeholder="Description">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="dataObject.type" #report_prescription="ngModel" name="report_prescription" placeholder="Prescription">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="dataObject.body" #report_nextdate="ngModel" name="report_nextdate" placeholder="Next Date">
+    </mat-form-field>
+  </li>
+
+    <button mat-raised-button (click)="EditDiscussion(dataObject)">Submit</button>
+
+
+</ol>

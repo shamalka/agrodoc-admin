@@ -1,0 +1,28 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let discussion of discussions">
+                <div class="card card-chart">
+                        
+                        <div id="fname" class="card-header card-header-success">
+                            <h4 id="full_name" class="card-title">{{ discussion.title }}</h4>
+                        </div>
+            
+                        <div class="card-body">
+                            <p class="card-title">{{ discussion.type }}</p>
+                            <img src="{{ discussion.image_url }}" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-primary" (click)="openEditDialog(discussion.id, discussion.title, discussion.type, discussion.body, discussion.user_id, discussion.user_name, discussion.image_url, discussion.timestamp)">Edit</button>
+                            <button type="button" class="btn btn-danger" (click)="deleteDiscussion(discussion.id)">Delete</button>
+                        </div>
+                        <div class="btnclass">
+                         
+                        </div>
+                        
+                </div>
+                
+                
+        </div>
+    </div>
+</div>
